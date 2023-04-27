@@ -40,7 +40,7 @@ class KineticTypography extends PApplet {
     pg.text('N', 0, 0)
     pg.popMatrix()
     pg.endDraw()
-
+    
     image(pg, 0, 0)
 
     for {
