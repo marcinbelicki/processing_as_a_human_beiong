@@ -8,9 +8,9 @@ class HalftoneChars extends HalftoneDot {
   private lazy val font: PFont = createFont("TT Hoves Pro Trial Bold.ttf", 600)
   private val text: String = "йłČф"
 
-  override protected val tiles = 100
+  override protected val tiles = 300
   
-  override protected val scaleResolution: Float = 2
+  override protected val scaleResolution: Float = 3
 
   override def loadImage: PImage = loadImage("kotki.png")
 
