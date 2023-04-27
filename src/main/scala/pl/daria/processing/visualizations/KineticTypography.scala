@@ -1,8 +1,8 @@
 package pl.daria.processing.visualizations
 
 import pl.daria.processing.ProcessingClassRunner
+import processing.core.PConstants.{CENTER, P2D, TWO_PI}
 import processing.core.{PApplet, PFont, PGraphics}
-import processing.core.PConstants.{CENTER, P2D, PI, TWO_PI}
 
 class KineticTypography extends PApplet {
 
@@ -58,7 +58,6 @@ class KineticTypography extends PApplet {
       dh = tileH
     } copy(pg, sx, sy, sw, sh, dx, dy, dw, dh)
 
-    saveFrame("corrected/###.png")
 
   }
 }
