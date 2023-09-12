@@ -7,23 +7,23 @@ trait HalftoneDot extends PApplet {
 
   private var img: PImage = _
   protected val tiles: Int = 35
-  private lazy val tileSize: Float = 
-    if (height > width) height / tiles 
+  private lazy val tileSize: Float =
+    if (height > width) height / tiles
     else width / tiles
 
   protected val scaleResolution: Float = 1
-  
+
   protected def loadImage: PImage = loadImage("face_blurry.jpg")
+
   protected def scaledEntity(scale: Float): Unit = ellipse(0, 0, scale, scale)
-  
+
   override def settings(): Unit = {
     img = loadImage
     img.resize((img.pixelWidth * scaleResolution).toInt, (img.pixelHeight * scaleResolution).toInt)
-    size(img.pixelWidth, img.pixelHeight )
+    size(img.pixelWidth, img.pixelHeight)
   }
 
-  override def setup(): Unit = {
-  }
+  override def setup(): Unit = {}
 
   override def draw(): Unit = {
     background(0xF1F1F1)
@@ -44,5 +44,5 @@ trait HalftoneDot extends PApplet {
     popMatrix()
     if (frameCount == 1) saveFrame(s"${getClass.getSimpleName}/result.png")
   }
-  
+
 }

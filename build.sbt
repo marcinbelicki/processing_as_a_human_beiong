@@ -11,4 +11,7 @@ lazy val root = (project in file("."))
     libraryDependencies += munit % Test
   )
 
+resolvers += "jitpack.io" at "https://jitpack.io"
+
 libraryDependencies += "org.processing" % "core" % "3.3.7"
+libraryDependencies += "org.processing" % "video" % "3.3.7"
