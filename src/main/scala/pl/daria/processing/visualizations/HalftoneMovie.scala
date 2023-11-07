@@ -14,6 +14,9 @@ class HalftoneMovie extends PApplet with VideoApplet {
     if (height > width) height / tiles
     else width / tiles
 
+  movie.read()
+
+  movie.frameRate * movie.duration()
   protected val scaleResolution: Float = 1
 
   protected def scaledEntity(scale: Float): Unit = ellipse(0, 0, scale, scale)
